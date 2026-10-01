@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+
 # Function to design FIR filter
 def design_fir_filter(cutoff_freq, filter_length, window_type):
     # Calculate the middle point
@@ -33,6 +34,7 @@ def plot_filter_response(filter_coefficients):
     # Normalize magnitude so maximum is 0 dB
     magnitude_db = magnitude_db - np.max(magnitude_db)
     # Magnitude Response
+    
     plt.figure(figsize=(10, 6))
     plt.plot(frequency,magnitude_db)
     plt.title('FIR Filter Magnitude Response')
@@ -50,6 +52,7 @@ def plot_filter_response(filter_coefficients):
     plt.ylabel('Amplitude')
     plt.grid(True)
     plt.show()
+    
 # Filter Specifications
 cutoff_frequency = 0.2
 filter_length = 51
